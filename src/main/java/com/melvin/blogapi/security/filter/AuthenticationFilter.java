@@ -50,6 +50,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
                 .withSubject(authResult.getName())
                 .withExpiresAt(new Date(System.currentTimeMillis() + 7000000))
                 .sign(Algorithm.HMAC256(JWT_SECRET));
-        response.addHeader("Authorization","Bearer "+token);
+        response.addHeader("Authorization",token);
+        response.getWriter().write(token);
     }
 }

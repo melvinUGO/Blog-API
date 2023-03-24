@@ -6,6 +6,7 @@ import com.melvin.blogapi.Model.Post;
 import com.melvin.blogapi.Repository.PostRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,6 +42,7 @@ public class PostServiceImpli implements PostService{
         PostEntity postEntity = unWrap(postRepository.findById(id),id);
         postEntity.setPost(post.getPost());
         postEntity.setTitle(post.getTitle());
+        postEntity.setImageUrl(post.getImageUrl());
         postEntity.setAuthor(post.getAuthor());
         postEntity.setUpdatedAt(post.getCreatedAt());
 

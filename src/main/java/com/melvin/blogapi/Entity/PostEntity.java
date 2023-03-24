@@ -25,10 +25,11 @@ public class PostEntity {
     private String imageUrl;
 
     @NotBlank(message = "Post cannot be blank")
+    @Column(length = 65555)
     private String post;
 
     @NotBlank(message = "Author cannot be blank")
-    private String Author;
+    private String author;
 
     @CreationTimestamp
     private Instant createdAt;

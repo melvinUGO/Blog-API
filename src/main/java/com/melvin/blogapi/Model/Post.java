@@ -15,7 +15,7 @@ public class Post {
     private String title;
     private String imageUrl;
     private String post;
-    private String Author;
+    private String author;
     private Instant createdAt;
     private Instant updatedAt;
 }
